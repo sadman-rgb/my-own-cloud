@@ -1,0 +1,21 @@
+{
+  "canisters": {
+    "cloud_storage_frontend": {
+      "type": "assets",
+      "source": ["dist"],
+      "build": "npm install && npm run build",
+      "candid": "src/my-own-cloud.did",
+      "dependencies": []
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"]
+    }
+  },
+  "version": 1
+}
